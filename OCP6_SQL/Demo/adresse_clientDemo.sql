@@ -1,0 +1,22 @@
+DELETE FROM adresse_client;
+
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (1, 15, true, 'Lotheville', 92, null, null, '67029', 'Strasbourg');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (2, 18, true,'Mariners Cove', 65, 'Nord-Pas-de-Calais', 'Europe/Paris', '59463', 'Lomme');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (3, 14, true,'5th', 80, 'Basse-Normandie', 'Europe/Paris', '61015  ', 'Alençon');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (4, 3, true,'Aberg', 77, null, null, '59865', 'Lille');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (5, 28, true,'Beilfuss', 58, null, null, '78604', 'Maisons-Laffitte');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (6, 3, true,'Towne', 36, null, null, '95761', 'Roissy Charles-de-Gaulle');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (7, 19, true,'Glacier Hill', 22, null, null, '19117', 'Brive-la-Gaillarde');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (8, 30, true,'Maywood', 100, null, null, '92504', 'Rueil-Malmaison');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (9, 16, true,'Lukken', 2, null, null, '88020', 'Épinal');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (10, 6, true,'Rieder', 74, null, null, '20414', 'Bastia');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (11, 23, true,'Lyons', 23, 'Poitou-Charentes', 'Europe/Paris', '17184', 'Périgny');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (12, 26, true,'Sutherland', 3, null, null, '71332', 'Chalon-sur-Saône');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (13, 20, true,'Leroy', 58, null, null, '60922', 'Creil');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (14, 30, true,'Waxwing', 60, null, null, '74999', 'Annecy');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (15, 11, true,'Oneill', 32, null, null, '75080', 'Paris 02');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (16, 21, true,'Acker', 38, null, null, '18035', 'Bourges');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (17, 7, true,'Pearson', 71, 'Île-de-France', 'Europe/Paris', '93344', 'Le Raincy');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (18, 4, true,'Marcy', 30, null, null, '69669', 'Villefranche-sur-Saône');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (19, 1, true,'Shasta', 54, null, null, '95194', 'Goussainville');
+insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (20, 15, true,'Packers', 74, null, null, '95118', 'Sannois');
