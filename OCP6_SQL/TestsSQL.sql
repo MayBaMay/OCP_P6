@@ -108,3 +108,18 @@ INNER JOIN produit ON produit.id = ligne_commande.produit
 WHERE ligne_commande.numero_cmde = 'C6_201908_489';
 
 -- puis-je lister les pizzas pour lesquelles tous les ingrédients sont en stock?
+
+-- Dans une pizzeria spécifique
+SELECT produit.nom
+FROM produit
+WHERE produit.nom NOT IN (
+      SELECT produit.nom
+      FROM ingredient_pizza AS recette
+      INNER JOIN produit ON produit.id = recette.produit_id
+      INNER JOIN stock_actuel AS stock ON stock.ingredient_id = recette.ingredient_id
+      WHERE stock.pizzeria_id = 1
+          AND recette.quantite > stock.quantite
+      )
+    ORDER BY produit.nom;
+
+-- pour toutes les pizzerias

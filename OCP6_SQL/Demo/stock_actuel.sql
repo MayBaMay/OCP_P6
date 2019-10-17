@@ -29,7 +29,7 @@ insert into stock_actuel (pizzeria_id, ingredient_id, quantite, quantite_alerte,
 insert into stock_actuel (pizzeria_id, ingredient_id, quantite, quantite_alerte, alerte) values (1, 27, 218, 268, true);
 insert into stock_actuel (pizzeria_id, ingredient_id, quantite, quantite_alerte, alerte) values (1, 28, 476, 366, false);
 insert into stock_actuel (pizzeria_id, ingredient_id, quantite, quantite_alerte, alerte) values (1, 29, 38, 192, true);
-insert into stock_actuel (pizzeria_id, ingredient_id, quantite, quantite_alerte, alerte) values (1, 30, 452, 297, false);
+insert into stock_actuel (pizzeria_id, ingredient_id, quantite, quantite_alerte, alerte) values (1, 30, 0, 297, false);
 insert into stock_actuel (pizzeria_id, ingredient_id, quantite, quantite_alerte, alerte) values (2, 1, 32, 18, false);
 insert into stock_actuel (pizzeria_id, ingredient_id, quantite, quantite_alerte, alerte) values (2, 2, 72, 350, true);
 insert into stock_actuel (pizzeria_id, ingredient_id, quantite, quantite_alerte, alerte) values (2, 3, 463, 387, false);
