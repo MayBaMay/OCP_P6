@@ -1,5 +1,3 @@
-DELETE FROM categorie_ingredient;
-
 insert into categorie_ingredient (id, nom_categorie) values (1, 'bases');
 insert into categorie_ingredient (id, nom_categorie) values (2, 'pates');
 insert into categorie_ingredient (id, nom_categorie) values (3, 'ingredients pates pizza');

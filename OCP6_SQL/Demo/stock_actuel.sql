@@ -1,5 +1,3 @@
-DELETE FROM stock_actuel;
-
 insert into stock_actuel (pizzeria_id, ingredient_id, quantite, quantite_alerte, alerte) values (1, 1, 129, 83, false);
 insert into stock_actuel (pizzeria_id, ingredient_id, quantite, quantite_alerte, alerte) values (1, 2, 51, 253, true);
 insert into stock_actuel (pizzeria_id, ingredient_id, quantite, quantite_alerte, alerte) values (1, 3, 364, 444, true);

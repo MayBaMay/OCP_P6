@@ -1,5 +1,3 @@
-DELETE FROM ligne_commande;
-
 insert into ligne_commande (numero_ligne, numero_cmde, produit, quantite, prix_unitaire_HT, taux_TVA_100) values (1, 'C6_210906_678', 4, 5, 9.005, 5.5);
 insert into ligne_commande (numero_ligne, numero_cmde, produit, quantite, prix_unitaire_HT, taux_TVA_100) values (2, 'C6_210906_678', 30, 4, 1.137, 5.5);
 insert into ligne_commande (numero_ligne, numero_cmde, produit, quantite, prix_unitaire_HT, taux_TVA_100) values (3, 'C7_201908_1', 18, 5, 1.137, 5.5);

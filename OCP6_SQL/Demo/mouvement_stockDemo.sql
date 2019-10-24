@@ -1,5 +1,3 @@
-DELETE FROM mouvement_stock;
-
 insert into mouvement_stock (id, pizzeria_id, quantite, ingredient_id) values (1, 4, 69, 1);
 insert into mouvement_stock (id, pizzeria_id, quantite, ingredient_id) values (2, 10, 12, 2);
 insert into mouvement_stock (id, pizzeria_id, quantite, ingredient_id) values (3, 1, 74, 3);

@@ -1,5 +1,3 @@
-DELETE FROM affectation_staff;
-
 insert into affectation_staff (identifiant_staff, pizzeria_id, date_debut, date_fin) values (1, 3, '2019-07-30 01:04:30', null);
 insert into affectation_staff (identifiant_staff, pizzeria_id, date_debut, date_fin) values (2, 9, '2019-08-23 09:12:15', null);
 insert into affectation_staff (identifiant_staff, pizzeria_id, date_debut, date_fin) values (3, 6, '2019-06-30 04:58:12', null);

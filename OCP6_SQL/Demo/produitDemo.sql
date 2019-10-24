@@ -1,5 +1,3 @@
-DELETE FROM produit;
-
 insert into produit (id, prix_unitaire_HT, taux_TVA_100, nom, type_produit, categorie_id) values (1, 8.057, 5.5, 'MARGARITA', 'Transformé', 1);
 insert into produit (id, prix_unitaire_HT, taux_TVA_100, nom, type_produit, categorie_id) values (2, 8.246, 5.5, 'NAPOLITAINE', 'Transformé', 1);
 insert into produit (id, prix_unitaire_HT, taux_TVA_100, nom, type_produit, categorie_id) values (3, 8.530, 5.5, 'SICILIENNE', 'Transformé', 1);

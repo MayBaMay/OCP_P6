@@ -1,5 +1,3 @@
-DELETE FROM categorie_produit;
-
 insert into categorie_produit (id, nom_categorie) values (1, 'Pizzas');
 insert into categorie_produit (id, nom_categorie) values (2, 'Pâtes');
 insert into categorie_produit (id, nom_categorie) values (3, 'Plats chauds');

@@ -1,5 +1,3 @@
-DELETE FROM facture;
-
 insert into facture (numero_fact, numero_cmde, date_fact) values (1, 'C6_210906_678', '2019-03-11 19:51:06');
 insert into facture (numero_fact, numero_cmde, date_fact) values (2, 'C7_201908_1', '2018-11-27 02:24:39');
 insert into facture (numero_fact, numero_cmde, date_fact) values (3, 'C10_201903_1', '2018-11-13 04:47:41');

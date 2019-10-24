@@ -31,6 +31,7 @@ WHERE identifiant_client = 2;
 
 SELECT num_tel FROM contact_tel_client
 WHERE identifiant_client = 2;
+
 -- ai-je suffisamment de caractères pour enregistrer un mot de passe chiffré ?
 UPDATE client
 SET password = '$pbkdf2-sha256$29000$N2YMIWQsBWBMae09x1jrPQ$1t8iyB2A.WF/Z5JZv.lfCIhXXN33N23OSgQYThBYRfksfdqdfbhsdfhqhfd'
@@ -121,5 +122,3 @@ WHERE produit.nom NOT IN (
           AND recette.quantite > stock.quantite
       )
     ORDER BY produit.nom;
-
--- pour toutes les pizzerias

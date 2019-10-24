@@ -1,5 +1,3 @@
-DELETE FROM ingredient;
-
 insert into ingredient (id, nom, unite_de_mesure, categorie_id) values (1, 'Tomates', 'g', 7);
 insert into ingredient (id, nom, unite_de_mesure, categorie_id) values (2, 'creme fraiche', 'g', 1);
 insert into ingredient (id, nom, unite_de_mesure, categorie_id) values (3, 'sauce tomate', 'g', 1);

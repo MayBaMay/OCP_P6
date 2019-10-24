@@ -1,5 +1,3 @@
-DELETE FROM livraison;
-
 insert into livraison (numero_cmde, id_adresse, date_souhait_livr, type_livraison, livreur, livr_time_debut, livr_time_fin, pb_livraison) values ('C6_210906_678', 1, '2019-06-14 13:13:53', 'Livraison', 20, '2019-06-14 13:02:43', '2019-06-14 13:12:17', null);
 insert into livraison (numero_cmde, id_adresse, date_souhait_livr, type_livraison, livreur, livr_time_debut, livr_time_fin, pb_livraison) values ('C7_201908_1', 2, '2019-08-03 14:04:55', 'Livraison', 21, '2019-08-03 13:50:21', '2019-08-03 14:02:01', null);
 insert into livraison (numero_cmde, id_adresse, date_souhait_livr, type_livraison, livreur, livr_time_debut, livr_time_fin, pb_livraison) values ('C10_201903_1', 3, '2019-10-03 12:30:00', 'À emporter', 3, '2019-10-03 12:26:46', '2019-10-03 12:26:46', null);

@@ -1,5 +1,3 @@
-DELETE FROM adresse_client;
-
 insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (1, 15, true, 'Lotheville', 92, null, null, '67029', 'Strasbourg');
 insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (2, 18, true,'Mariners Cove', 65, 'Nord-Pas-de-Calais', 'Europe/Paris', '59463', 'Lomme');
 insert into  adresse_client (id, identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (3, 14, true,'5th', 80, 'Basse-Normandie', 'Europe/Paris', '61015  ', 'Alençon');

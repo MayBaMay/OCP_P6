@@ -1,5 +1,3 @@
-DELETE FROM ingredient_pizza;
-
 insert into ingredient_pizza (produit_id, ingredient_id, quantite) values (1, 3, 50);
 insert into ingredient_pizza (produit_id, ingredient_id, quantite) values (1, 36, 75);
 insert into ingredient_pizza (produit_id, ingredient_id, quantite) values (1, 20, 71);
