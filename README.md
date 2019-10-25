@@ -1,9 +1,9 @@
-# OCP_P6
-Dossier de spécification technique - OCPizza
+# OCP_P6 - Dossier de spécification technique - OCPizza
 
-Afin d'illustrer le dossier de spécification technique, une base de données fictive à été créée :
+Afin d'illustrer le dossier de spécification technique, une base de données fictive à été créée. Télécharger ce dossier et lancez le terminal de votre ordinateur.
 
 ## CRÉATION BASE DE DONNÉES, UTILISATEUR ET PRIVILÈGES
+Si besoin, documentation installation MySQL : [ici](https://openclassrooms.com/fr/courses/1959476-administrez-vos-bases-de-donnees-avec-mysql/1959969-installez-mysql)
 ```console
 $ Mysql -h localhost -u root -p
 # Enter password: (votre mot de passe root)
