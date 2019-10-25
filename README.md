@@ -27,3 +27,5 @@ $ MYSQL -u ocp6 -p ocPizza
 mysql> SOURCE SQL/OCP6_BD.sql;
 mysql> SOURCE SQL/importdata.sql;
 ```
+
+NB : Vous pouvez également utiliser le dump :  OCPizza_dump.sql
