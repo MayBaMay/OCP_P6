@@ -1,6 +1,6 @@
 # OCP_P6 - Dossier de spécification technique - OCPizza
 
-Afin d'illustrer le dossier de spécification technique, une base de données fictive à été créée. Télécharger ce dossier et lancez le terminal de votre ordinateur.
+Afin d'illustrer le dossier de spécification technique, une base de données fictive à été créée. Télécharger ce dossier et lancez le terminal de votre ordinateur en positionnant le répertoire courant dans OCP_P6/SQL.
 
 ## CRÉATION BASE DE DONNÉES, UTILISATEUR ET PRIVILÈGES
 Si besoin, documentation installation MySQL : [ici](https://openclassrooms.com/fr/courses/1959476-administrez-vos-bases-de-donnees-avec-mysql/1959969-installez-mysql)
@@ -24,8 +24,8 @@ $ MYSQL -u ocp6 -p ocPizza
 
 ### Création de la structure de la base et insertion des données fictives.
 ```mysql
-mysql> SOURCE SQL/OCP6_BD.sql;
-mysql> SOURCE SQL/importdata.sql;
+mysql> SOURCE OCP6_BD.sql;
+mysql> SOURCE importdata.sql;
 ```
 
-NB : Vous pouvez également utiliser le dump :  OCPizza_dump.sql
+NB : Vous pouvez également utiliser le dump :  **OCPizza_dump.sql**
