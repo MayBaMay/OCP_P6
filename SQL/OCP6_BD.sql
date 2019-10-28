@@ -118,10 +118,13 @@ CREATE TABLE client (
 
 CREATE TABLE commande (
                 numero_cmde VARCHAR(150) NOT NULL,
+                date_cmde DATETIME DEFAULT NOW() NOT NULL,
                 pizzeria_id INT NOT NULL,
                 identifiant_client INT NOT NULL,
+                type_livraison VARCHAR(150) DEFAULT 'À emporter' NOT NULL,
+                time_souhaitee_livr DATETIME NOT NULL,
                 adresse_client INT,
-                date_cmde DATETIME DEFAULT NOW() NOT NULL,
+                contact_client INTEGER,
                 statut VARCHAR(100) DEFAULT 'En attente de préparation' NOT NULL,
                 reduction_100 INT,
                 paiement BOOLEAN DEFAULT false,
@@ -130,6 +133,9 @@ CREATE TABLE commande (
                 pizzaiolo INT,
                 time_debut_preparation TIME,
                 time_fin_preparation TIME,
+                livreur INT,
+                time_debut_livraison TIME,
+                time_fin_livraison TIME,
                 pb_cmde TEXT,
                 PRIMARY KEY (numero_cmde)
 );
@@ -162,19 +168,6 @@ CREATE TABLE adresse_client (
                 code_postal INT NOT NULL,
                 commune VARCHAR(150) NOT NULL,
                 PRIMARY KEY (id)
-);
-
-CREATE TABLE livraison (
-                numero_cmde VARCHAR(150) NOT NULL,
-                id_adresse INT NOT NULL,
-                time_souhaitee_livr DATETIME NOT NULL,
-                contact_client INTEGER,
-                type_livraison VARCHAR(150) DEFAULT 'À emporter' NOT NULL,
-                livreur INT,
-                time_debut_livraison TIME,
-                time_fin_livraison TIME,
-                pb_livraison TEXT,
-                PRIMARY KEY (numero_cmde, id_adresse)
 );
 
 CREATE TABLE contact_tel_client (
@@ -219,10 +212,6 @@ ALTER TABLE ligne_commande ADD CONSTRAINT produit_ligne_commande_fk
 FOREIGN KEY (produit)
 REFERENCES produit (id);
 
-ALTER TABLE commande ADD CONSTRAINT pizzeria_commande_fk
-FOREIGN KEY (pizzeria_id)
-REFERENCES pizzeria (id);
-
 ALTER TABLE mouvement_stock ADD CONSTRAINT restaurant_mouvement_stock_fk
 FOREIGN KEY (pizzeria_id)
 REFERENCES pizzeria (id);
@@ -232,6 +221,10 @@ FOREIGN KEY (pizzeria_id)
 REFERENCES pizzeria (id);
 
 ALTER TABLE affectation_staff ADD CONSTRAINT pizzeria_affectation_staff_fk
+FOREIGN KEY (pizzeria_id)
+REFERENCES pizzeria (id);
+
+ALTER TABLE commande ADD CONSTRAINT pizzeria_commande_fk
 FOREIGN KEY (pizzeria_id)
 REFERENCES pizzeria (id);
 
@@ -247,7 +240,7 @@ ALTER TABLE affectation_staff ADD CONSTRAINT mb_staff_affectation_staff_fk
 FOREIGN KEY (identifiant_staff)
 REFERENCES mb_staff (identifiant);
 
-ALTER TABLE livraison ADD CONSTRAINT mb_staff_livraisons_fk
+ALTER TABLE commande ADD CONSTRAINT mb_staff_commande_fk2
 FOREIGN KEY (livreur)
 REFERENCES mb_staff (identifiant);
 
@@ -255,13 +248,21 @@ ALTER TABLE contact_tel_client ADD CONSTRAINT client_contact_tel_fk
 FOREIGN KEY (identifiant_client)
 REFERENCES client (identifiant);
 
-ALTER TABLE adresse_client ADD CONSTRAINT client_adresse_fk
-FOREIGN KEY (identifiant_client)
-REFERENCES client (identifiant);
-
 ALTER TABLE commande ADD CONSTRAINT client_commande_fk
 FOREIGN KEY (identifiant_client)
 REFERENCES client (identifiant);
+
+ALTER TABLE adresse_client ADD CONSTRAINT client_adresse_client_fk
+FOREIGN KEY (identifiant_client)
+REFERENCES client (identifiant);
+
+ALTER TABLE commande ADD CONSTRAINT adresse_client_commande_fk
+FOREIGN KEY (adresse_client)
+REFERENCES adresse_client (id);
+
+ALTER TABLE commande ADD CONSTRAINT contact_tel_client_commande_fk
+FOREIGN KEY (contact_client)
+REFERENCES contact_tel_client (id);
 
 ALTER TABLE facture ADD CONSTRAINT commande_facture_fk
 FOREIGN KEY (numero_cmde)
@@ -270,15 +271,3 @@ REFERENCES commande (numero_cmde);
 ALTER TABLE ligne_commande ADD CONSTRAINT commande_ligne_commande_fk
 FOREIGN KEY (numero_cmde)
 REFERENCES commande (numero_cmde);
-
-ALTER TABLE livraison ADD CONSTRAINT commande_livraisons_fk
-FOREIGN KEY (numero_cmde)
-REFERENCES commande (numero_cmde);
-
-ALTER TABLE livraison ADD CONSTRAINT adresse_client_livraisons_fk
-FOREIGN KEY (id_adresse)
-REFERENCES adresse_client (id);
-
-ALTER TABLE livraison ADD CONSTRAINT contact_tel_client_livraison_fk
-FOREIGN KEY (contact_client)
-REFERENCES contact_tel_client (id);

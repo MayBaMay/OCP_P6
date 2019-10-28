@@ -89,20 +89,21 @@ FROM commande
 WHERE identifiant_client = 11;
 
 -- puis-je afficher l'adresse de livraison d'une commande terminée même après que le client a changé son adresse?
-UPDATE adresse_client SET adresse_actuelle = false
+SELECT identifiant_client, id, adresse_actuelle FROM adresse_client
 WHERE identifiant_client = 15;
+
+UPDATE adresse_client SET adresse_actuelle = false WHERE identifiant_client = 15;
 insert into  adresse_client (identifiant_client, adresse_actuelle, voie, num_voie, complement_adresse, commentaire, code_postal, commune) values (15, true, 'rue de belleville', 18, 'cedex 26', 'chez Mme Irma', '33000', 'Bordeaux');
 
-SELECT commande.numero_cmde,
-      client.identifiant,
-      adresse_client.id
-FROM client
+SELECT commande.numero_cmde, client.identifiant, adresse_client.id FROM client
 INNER JOIN commande ON client.identifiant = commande.identifiant_client
 INNER JOIN adresse_client ON adresse_client.id = client.identifiant
-WHERE numero_cmde = 'C6_201908_489'
-ORDER BY commande.numero_cmde;
+WHERE numero_cmde = 'C6_201908_489' ORDER BY commande.numero_cmde;
 
--- puis retrouver le prix payé pour une pizza dans une commande terminé même si le prix a changé depuis?
+SELECT identifiant_client, id, adresse_actuelle FROM adresse_client
+WHERE identifiant_client = 15;
+
+-- puis-je retrouver le prix payé pour une pizza dans une commande terminé même si le prix a changé depuis?
 UPDATE produit SET prix_unitaire_HT = prix_unitaire_HT * 1.002;
 SELECT ligne_commande.prix_unitaire_HT AS prix_cmde,
       produit.prix_unitaire_HT AS prix_actuels
@@ -123,4 +124,4 @@ WHERE produit.nom NOT IN (
       WHERE stock.pizzeria_id = 1
           AND recette.quantite > stock.quantite
       )
-    ORDER BY produit.nom;
+    AND produit.categorie_id = 1;

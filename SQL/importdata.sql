@@ -1,6 +1,4 @@
 -- Réinitialisation des données
-
-DELETE FROM livraison;
 DELETE FROM adresse_client;
 DELETE FROM contact_tel_client;
 DELETE FROM facture;
@@ -20,9 +18,7 @@ DELETE FROM mb_staff;
 DELETE FROM niv_autorisation;
 DELETE FROM mb_staff;
 
-
 -- Import des données
-
 SELECT 'IMPORT NIV AUTORISATION';
 SOURCE Demo/niv_autorisation.sql;
 SELECT 'IMPORT DU STAFF';
@@ -49,8 +45,6 @@ SELECT 'IMPORT DES RECETTES';
 SOURCE Demo/ingredient_pizzaDemo.sql;
 SELECT 'IMPORT DES COMMANDES';
 SOURCE Demo/commandeDemo.sql;
-SELECT 'IMPORT DES LIVRAISONS';
-SOURCE Demo/livraisonDemo.sql;
 SELECT 'IMPORT DES FACTURES';
 SOURCE Demo/factureDemo.sql;
 SELECT 'IMPORT DES LIGNE DE COMMANDE';
