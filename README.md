@@ -3,7 +3,7 @@
 Afin d'illustrer le dossier de spécification technique, une base de données fictive à été créée. Télécharger ce dossier et lancez le terminal de votre ordinateur en positionnant le répertoire courant dans OCP_P6/SQL.
 
 ## CRÉATION BASE DE DONNÉES, UTILISATEUR ET PRIVILÈGES
-Si besoin, documentation installation MySQL : [ici](https://openclassrooms.com/fr/courses/1959476-administrez-vos-bases-de-donnees-avec-mysql/1959969-installez-mysql)
+
 ```console
 $ Mysql -h localhost -u root -p
 # Enter password: (votre mot de passe root)

@@ -1,3 +1,5 @@
+-- https://github.com/MayBaMay/OCP_P6 --
+
 -- CRÉATION BASE DE DONNÉES, UTILISATEUR ET PRIVILÈGES --
 
    -- $ Mysql -h localhost -u root -p
