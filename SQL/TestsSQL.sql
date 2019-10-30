@@ -61,7 +61,7 @@ WHERE cmd.statut = 'En attente de livraison'
 ORDER BY lg.numero_cmde, lg.numero_ligne;
 
 -- puis-je afficher les commandes en attente d'un client?
-SELECT CONCAT (cl.nom, ' ', cl.prenom),
+SELECT CONCAT (cl.nom, ' ', cl.prenom) AS CLIENT,
       lg.numero_cmde AS NUM_CMDE,
       lg.numero_ligne AS NUM_LGN,
       prod.nom AS NOM,
