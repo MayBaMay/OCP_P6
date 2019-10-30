@@ -1,4 +1,3 @@
-insert into contact_tel_client (id, identifiant_client, num_tel) values (1, 1, '0763574719');
 insert into contact_tel_client (id, identifiant_client, num_tel) values (2, 2, '0127298138');
 insert into contact_tel_client (id, identifiant_client, num_tel) values (3, 3, '0242741180');
 insert into contact_tel_client (id, identifiant_client, num_tel) values (4, 4, '0561735956');

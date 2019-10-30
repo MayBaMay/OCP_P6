@@ -11,11 +11,11 @@ SELECT ligne_commande.numero_cmde AS NUM_CMDE,
       ligne_commande.quantite AS QUANTITE,
       ligne_commande.prix_unitaire_HT AS HT_CMDE,
       ligne_commande.taux_TVA_100 AS TVA_CMDE,
-      (ligne_commande.prix_unitaire_HT * ligne_commande.quantite * (1 + ligne_commande.taux_TVA_100 / 100)) AS TTC_LG_CMDE
+      ROUND(ligne_commande.prix_unitaire_HT * ligne_commande.quantite * (1 + ligne_commande.taux_TVA_100 / 100), 2) AS TTC_LG_CMDE
 FROM ligne_commande
 INNER JOIN produit
   ON produit.id = ligne_commande.produit
-WHERE numero_cmde = 'C6_210906_678';
+WHERE numero_cmde = 'C6_201908_546';
 
 -- ai-je une perte d'info sur les numéros de téléphone?
 UPDATE contact_tel_client
@@ -42,21 +42,21 @@ FROM client
 WHERE identifiant < 5;
 
 -- puis-je afficher les commandes en attente dans un resto particulier?
-SELECT lg.numero_cmde AS NUM_CMDE,
+SELECT cmd.pizzeria_id AS NUM_PIZZERIA,
+      lg.numero_cmde AS NUM_CMDE,
       lg.numero_ligne AS NUM_LGN,
       prod.nom AS NOM,
       lg.quantite AS QUANTITE,
       lg.prix_unitaire_HT AS HT_CMDE,
       lg.taux_TVA_100 AS TVA_CMDE,
-      (lg.prix_unitaire_HT * lg.quantite * (1 + lg.taux_TVA_100 / 100)) AS TTC_LG_CMDE,
+      ROUND(lg.prix_unitaire_HT * lg.quantite * (1 + lg.taux_TVA_100 / 100), 2) AS TTC_LG_CMDE,
       cmd.statut AS STATUT
 FROM ligne_commande AS lg
 INNER JOIN commande AS cmd
   ON cmd.numero_cmde = lg.numero_cmde
 INNER JOIN produit AS prod
   ON prod.id = lg.produit
-WHERE cmd.statut = 'En attente de préparation'
-  OR cmd.statut = 'En attente de livraison'
+WHERE cmd.statut = 'En attente de livraison'
   AND cmd.pizzeria_id = 6
 ORDER BY lg.numero_cmde, lg.numero_ligne;
 
@@ -78,8 +78,7 @@ INNER JOIN produit AS prod
 INNER JOIN client AS cl
   ON cmd.identifiant_client = cl.identifiant
 WHERE cmd.identifiant_client = 11
-  AND cmd.statut = 'En attente de préparation'
-  OR cmd.statut = 'En attente de livraison'
+  AND cmd.statut LIKE '%En attente%'
 ORDER BY lg.numero_cmde, lg.numero_ligne;
 
 SELECT numero_cmde,

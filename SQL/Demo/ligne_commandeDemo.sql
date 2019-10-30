@@ -22,7 +22,7 @@ insert into ligne_commande (numero_ligne, numero_cmde, produit, quantite, prix_u
 insert into ligne_commande (numero_ligne, numero_cmde, produit, quantite, prix_unitaire_HT, taux_TVA_100) values (22, 'C1_201811_27000', 9, 3, 9.289, 5.5);
 insert into ligne_commande (numero_ligne, numero_cmde, produit, quantite, prix_unitaire_HT, taux_TVA_100) values (23, 'C4_201904_2903', 3, 1, 8.530, 5.5);
 insert into ligne_commande (numero_ligne, numero_cmde, produit, quantite, prix_unitaire_HT, taux_TVA_100) values (24, 'C4_201904_2903', 25, 5, 1.137, 5.5);
-insert into ligne_commande (numero_ligne, numero_cmde, produit, quantite, prix_unitaire_HT, taux_TVA_100) values (25, 'C5_201907_8739', 29, 3, 1.896, 5.5);
+insert into ligne_commande (numero_ligne, numero_cmde, produit, quantite, prix_unitaire_HT, taux_TVA_100) values (25, 'C6_201907_8739', 6, 3, 1.896, 5.5);
 insert into ligne_commande (numero_ligne, numero_cmde, produit, quantite, prix_unitaire_HT, taux_TVA_100) values (26, 'C6_201812_40932', 19, 5, 1.706, 5.5);
 insert into ligne_commande (numero_ligne, numero_cmde, produit, quantite, prix_unitaire_HT, taux_TVA_100) values (27, 'C3_201908_7684', 24, 3, 1.137, 5.5);
 insert into ligne_commande (numero_ligne, numero_cmde, produit, quantite, prix_unitaire_HT, taux_TVA_100) values (28, 'C3_201908_7684', 12, 3, 6.825, 5.5);

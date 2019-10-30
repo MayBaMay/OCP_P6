@@ -1,4 +1,4 @@
-insert into client (identifiant, cpte_en_ligne, nom, prenom, mail, password) values (1, false, 'Spilsted', 'Dorothée', 'kspilsted0@stumbleupon.com', 'OBi6VWUIfD');
+insert into client (identifiant, cpte_en_ligne, nom, prenom, mail, password) values (1, false, 'vente', 'à emporter', ' ', 'OBi6VWUIfD');
 insert into client (identifiant, cpte_en_ligne, nom, prenom, mail, password) values (2, true, 'Pietron', 'Eléa', 'mpietron1@myspace.com', 'liYcLWOoet');
 insert into client (identifiant, cpte_en_ligne, nom, prenom, mail, password) values (3, true, 'Sey', 'Irène', 'csey2@so-net.ne.jp', 'xnbMZleW88');
 insert into client (identifiant, cpte_en_ligne, nom, prenom, mail, password) values (4, true, 'Benedicto', 'Cléa', 'lbenedicto3@list-manage.com', 'W6LJ43I');
